@@ -7,7 +7,7 @@ const Home = async () => {
   const dbNotes = collection(db, "data");
 
   const notes = await getDocs(dbNotes);
-
+  console.log(notes);
   const noteList = notes.docs.map((doc) => doc.data());
 
   return (
