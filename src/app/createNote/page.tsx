@@ -16,7 +16,7 @@ const Notes = () => {
     }
 
     try {
-      const notes = collection(db, "note");
+      collection(db, "note");
 
       await setDoc(doc(db, "data", crypto.randomUUID()), { data: note });
 
